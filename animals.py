@@ -11,28 +11,34 @@ class Animal:
     def set_sound(self,sound):
         self.__sound = sound
 
+    def age(self):
+        return self.__age 
+
     def speak(self):
-        print(f"{self.__namwe} says {self.__sound}")
+        print(f"{self.__name} says {self.__sound}")
 
     def move(self):
         print("Run")
 
     def describe(self):
-        print({self.__name} {self.__age})
+        print({self.__name},{self.__age})
 
     def __str__(self):
         print({self.__name}, {self.__age}, {self.__sound})
 
 
 class Dog(Animal):
-    def __init__(self, name, age, breed):
-        super.__init__(name,age)
+    def __init__(self, name, age, sound, breed):
+        super().__init__(name,age,sound)
+        self.__name = name
+        self.__age = age
+        self.__sound = sound
 
     def set_breed(self,breed):
         self.__breed = breed
 
     def speak(self):
-        print(f"{self.__namwe} says {self.__sound}")
+        print(f"{self.__name} says {self.__sound}")
 
     def move(self):
         print("Run")
@@ -42,8 +48,8 @@ class Dog(Animal):
 
 
 class Bird(Animal):
-    def __init__(self, name, age, can_fly):
-        super.__init__(name,age)
+    def __init__(self, name, age, sound, can_fly):
+        super().__init__(name,age,sound)
 
     def set_can_fly(self,can_fly):
         self.__can_fly = can_fly
@@ -56,8 +62,8 @@ class Bird(Animal):
 
 
 class Fish(Animal):
-    def __init__(self, name, age, water_type):
-        super.__init__(name,age)
+    def __init__(self, name, age, sound, water_type):
+        super().__init__(name,age,sound)
 
     def set_water_type(self,water_type):
         self.__water_type = water_type
@@ -70,8 +76,8 @@ class Fish(Animal):
 
 
 class Cat(Animal):
-    def __init__(self, name, age, indoor):
-        super.__init__(name,age)
+    def __init__(self, name, age, sound, indoor):
+        super().__init__(name,age,sound)
 
     def set_indoor(self,indoor):
         self.__indoor = indoor 
